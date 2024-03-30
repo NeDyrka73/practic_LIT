@@ -8,12 +8,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resource\background.jpg" />
+    <None Remove="Resource\envelope.png" />
+    <None Remove="Resource\eye.png" />
+    <None Remove="Resource\lock.png" />
+    <None Remove="Resource\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.12">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource\background.jpg" />
+    <Resource Include="Resource\envelope.png" />
+    <Resource Include="Resource\eye.png" />
+    <Resource Include="Resource\lock.png" />
+    <Resource Include="Resource\user.png" />
   </ItemGroup>
 
 </Project>

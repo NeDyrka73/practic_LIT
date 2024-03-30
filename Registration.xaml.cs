@@ -38,20 +38,53 @@ namespace WpfApp2
 
         }
 
-        private void but_Click(object sender, RoutedEventArgs e)
+        private void But_Click(object sender, RoutedEventArgs e)
         {
             var login = Login.Text;
             var pass = Password.Text;
+            var pass2 = Password2.Text;
             var mail = Mail.Text;
             var CONTEXT = new AppDbContext();
 
+
             var user_exists = CONTEXT.Users.FirstOrDefault(x => x.Login == login);
+
+            if (login.Length == 0)
+            {
+                MessageBox.Show("Укажите логин!");
+                return;
+            } else if (login.Length < 6)
+            {
+                MessageBox.Show("Логин должен состоять из 6 символов!");
+                return;
+            }
+
+            if (mail.Length == 0)
+            {
+                MessageBox.Show("Укажите почту!");
+                return;
+            }
+
+            if (pass.Length == 0)
+            {
+                MessageBox.Show("Укажите пароль!");
+                return;
+            } else if (pass.Length < 6)
+            {
+                MessageBox.Show("Пароль должен содержать не менее 6 символов!");
+                return;
+            } else if (pass != pass2)
+            {
+                MessageBox.Show("Пароли не совпадают!");
+                return;
+            }
+
             if (user_exists is not null)
             {
                 MessageBox.Show("Такой пользователь уже существует!");
                 return;
             }
-          
+
             var user = new User { Login = login, Password = pass, Mail = mail};
             CONTEXT.Users.Add(user);
             CONTEXT.SaveChanges();

@@ -23,6 +23,7 @@ namespace WpfApp2
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -48,6 +49,9 @@ namespace WpfApp2
 
 
             var user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == pass);
+            
+          
+
             if (user is null)
             {
                 MessageBox.Show("Неверный логин или пароль!");
@@ -55,7 +59,9 @@ namespace WpfApp2
             }
             
     
-            MessageBox.Show("Вы успешно вошли в аккунт!");
+            MessageBox.Show("Вы успешно вошли в аккаунт!");
         }
+
+        
     }
 }

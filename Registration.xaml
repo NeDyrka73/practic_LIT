@@ -8,7 +8,7 @@
         Title="Registration" Height="450" Width="800" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\student\Desktop\practic_LIT\Resuorse\1612738049_95-p-fon-sine-goluboi-abstraktsiya-130.jpg"/>
+            <ImageBrush ImageSource="Resource/background.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="229*"/>
@@ -20,19 +20,19 @@
             <RowDefinition Height="380.039"/>
             <RowDefinition Height="31*"/>
         </Grid.RowDefinitions>
-        <TextBlock Background="LightBlue" Margin="0,0,1,0" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock Background="#FF7D7CBA" Margin="0,0,1,0" Grid.Column="1" Grid.Row="1"/>
         <TextBlock Text="Регистрация" Foreground="White" FontSize="30" Grid.Column="1" Margin="79,16,77,324" Grid.Row="1" TextAlignment="Center" />
         <TextBox Background="White" Grid.Column="1" Margin="56,74,42,270" Grid.Row="1" FontSize="25" Name="Login"/>
         <TextBox Background="White" Grid.Column="1" Margin="56,131,42,213" Grid.Row="1" FontSize="25" Name="Mail"/>
         <TextBox Background="White" Grid.Column="1" Margin="56,249,42,95" Grid.Row="1" FontSize="25" Name="Password2"/>
         <TextBox Background="White" Grid.Column="1" Margin="56,189,42,155" Grid.Row="1" FontSize="25" Name="Password"/>
-        <Image Source="C:\Users\student\Desktop\practic_LIT\Resuorse\user.png" Margin="26,81,290,276" Grid.Row="1" Grid.Column="1"/>
-        <Image Source="C:\Users\student\Desktop\practic_LIT\Resuorse\lock.png" Margin="26,196,290,161" Grid.Row="1" Grid.Column="1"/>
-        <Image Source="C:\Users\student\Desktop\practic_LIT\Resuorse\lock.png" Margin="26,256,290,101" Grid.Row="1" Grid.Column="1"/>
-        <Image Source="C:\Users\student\Desktop\practic_LIT\Resuorse\eye.png" Margin="269,196,47,161" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.538,-0.042"/>
-        <Image Source="C:\Users\student\Desktop\practic_LIT\Resuorse\eye.png" Margin="269,256,47,101" Grid.Row="1" Grid.Column="1"/>
-        <Image Source="C:\Users\student\Desktop\practic_LIT\Resuorse\envelope.png" Margin="26,138,290,219" Grid.Row="1" Grid.Column="1"/>
-        <Button Name="but" Click="but_Click" Content="Зарегестрироваться" FontSize="27" Background="White" HorizontalContentAlignment="Center" Grid.Column="1" Margin="27,299,27,34" Grid.Row="1"/>
+        <Image Source="Resource/user.png" Margin="26,81,290,276" Grid.Row="1" Grid.Column="1"/>
+        <Image Source="Resource/lock.png" Margin="26,196,290,161" Grid.Row="1" Grid.Column="1"/>
+        <Image Source="Resource/lock.png" Margin="26,256,290,101" Grid.Row="1" Grid.Column="1"/>
+        <Image Source="Resource/eye.png" Margin="269,196,47,161" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.538,-0.042"/>
+        <Image Source="Resource/eye.png" Margin="269,256,47,101" Grid.Row="1" Grid.Column="1"/>
+        <Image Source="Resource/envelope.png" Margin="26,138,290,219" Grid.Row="1" Grid.Column="1"/>
+        <Button Name="but" Click="But_Click" Content="Зарегестрироваться" FontSize="27" Background="White" HorizontalContentAlignment="Center" Grid.Column="1" Margin="27,299,27,34" Grid.Row="1"/>
         <TextBlock  Text="Зарегестрированы?" Foreground="White" FontSize="15" Grid.Column="1" Margin="27,348,129,11" Grid.Row="1" TextAlignment="Center" />
         <TextBlock  Text="Войдите" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Foreground="CornflowerBlue" FontSize="15" Grid.Column="1" Margin="179,349,79,10" Grid.Row="1" TextAlignment="Center" RenderTransformOrigin="0.679,0.533"/>
     </Grid>
