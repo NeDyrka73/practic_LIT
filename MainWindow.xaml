@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\student\source\repos\Bachkov\WpfApp1\NewFolder1\1612738049_95-p-fon-sine-goluboi-abstraktsiya-130.jpg"/>
+            <ImageBrush ImageSource="C:\Users\student\Desktop\practic_LIT\Resuorse\1612738049_95-p-fon-sine-goluboi-abstraktsiya-130.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="229*"/>
@@ -22,12 +22,12 @@
         </Grid.RowDefinitions>
         <TextBlock  Background="LightBlue" Margin="0,0,1,0" Grid.Column="1" Grid.Row="1"/>
         <TextBlock  Text="Авторизация" Foreground="White" FontSize="30" Grid.Column="1" Margin="79,77,77,263" Grid.Row="1" TextAlignment="Center" />
-        <TextBox Background="White" Grid.Column="1" Margin="56,143,42,201" Grid.Row="1" FontSize="25"/>
-        <TextBox Background="White" Grid.Column="1" Margin="56,212,42,132" Grid.Row="1" FontSize="25"/>
-        <Image Source="C:\Users\student\source\repos\Bachkov\WpfApp1\NewFolder1\user.png" Margin="26,150,290,207" Grid.Row="1" Grid.Column="1"/>
-        <Image Source="C:\Users\student\source\repos\Bachkov\WpfApp1\NewFolder1\free-icon-font-lock-3917642.png" Margin="26,219,290,138" Grid.Row="1" Grid.Column="1"/>
-        <Image Source="C:\Users\student\source\repos\Bachkov\WpfApp1\NewFolder1\eye.png" Margin="269,219,47,138" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="Войти" FontSize="27" Background="White" HorizontalContentAlignment="Center" Grid.Column="1" Margin="91,285,91,48" Grid.Row="1"/>
+        <TextBox Background="White" Grid.Column="1" Margin="56,143,42,201" Grid.Row="1" FontSize="25" Name="Login"/>
+        <TextBox Background="White" Grid.Column="1" Margin="56,212,42,132" Grid.Row="1" FontSize="25" Name="Password"/>
+        <Image Source="C:\Users\student\Desktop\practic_LIT\Resuorse\user.png" Margin="26,150,290,207" Grid.Row="1" Grid.Column="1"/>
+        <Image Source="C:\Users\student\Desktop\practic_LIT\Resuorse\lock.png" Margin="26,219,290,138" Grid.Row="1" Grid.Column="1"/>
+        <Image Source="C:\Users\student\Desktop\practic_LIT\Resuorse\eye.png" Margin="269,219,47,138" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="Войти" FontSize="27" Background="White" Click="Button_Click" HorizontalContentAlignment="Center" Grid.Column="1" Margin="91,285,91,48" Grid.Row="1"/>
         <TextBlock  Text="Не зарегестрированы?" Foreground="White" FontSize="15" Grid.Column="1" Margin="9,348,147,11" Grid.Row="1" TextAlignment="Center" />
         <TextBlock  Text="Зарегестрироваться" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Foreground="CornflowerBlue" FontSize="15" Grid.Column="1" Margin="160,348,225,11" Grid.Row="1" TextAlignment="Center" Grid.ColumnSpan="2"/>
     </Grid>

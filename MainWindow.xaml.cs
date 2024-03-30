@@ -38,5 +38,24 @@ namespace WpfApp2
         {
             Environment.Exit(0);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var login = Login.Text;
+            var pass = Password.Text;
+
+            var context = new AppDbContext();
+
+
+            var user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == pass);
+            if (user is null)
+            {
+                MessageBox.Show("Неверный логин или пароль!");
+                return;
+            }
+            
+    
+            MessageBox.Show("Вы успешно вошли в аккунт!");
+        }
     }
 }

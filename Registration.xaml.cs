@@ -31,11 +31,31 @@ namespace WpfApp2
 
         private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Registration registration = new Registration();
+            MainWindow MainWindow = new MainWindow();
 
-            registration.Show();
+            MainWindow.Show();
             this.Hide();
 
+        }
+
+        private void but_Click(object sender, RoutedEventArgs e)
+        {
+            var login = Login.Text;
+            var pass = Password.Text;
+            var mail = Mail.Text;
+            var CONTEXT = new AppDbContext();
+
+            var user_exists = CONTEXT.Users.FirstOrDefault(x => x.Login == login);
+            if (user_exists is not null)
+            {
+                MessageBox.Show("Такой пользователь уже существует!");
+                return;
+            }
+          
+            var user = new User { Login = login, Password = pass, Mail = mail};
+            CONTEXT.Users.Add(user);
+            CONTEXT.SaveChanges();
+            MessageBox.Show("Вы успешно зарегестрировались!");
         }
     }
 }
