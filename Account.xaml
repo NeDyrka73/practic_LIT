@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="Account" Height="450" Width="800">
+        Title="Account" Height="450" Width="800" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="Resource/background.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="342*"/>
+            <ColumnDefinition Width="229*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="380.039"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Margin="0,0,1,0" Grid.Column="1" Grid.Row="1" Background="#FF7D7CBA"/>
+        <TextBlock  Text="Добро пожаловать" Foreground="White" FontSize="30" Grid.Column="1" Margin="30,81,30,258" Grid.Row="1" TextAlignment="Center" />
+        <TextBlock Text="" Foreground="White" FontSize="30" Grid.Column="1" Margin="33,138,35,190" Grid.Row="1" Name="Login" TextAlignment="Center" />
     </Grid>
 </Window>

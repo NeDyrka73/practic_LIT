@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -51,31 +52,49 @@ namespace WpfApp2
 
             if (login.Length == 0)
             {
+                Login.BorderBrush = new SolidColorBrush(Colors.Red);
                 MessageBox.Show("Укажите логин!");
                 return;
             } else if (login.Length < 6)
             {
+                Login.BorderBrush = new SolidColorBrush(Colors.Red);
                 MessageBox.Show("Логин должен состоять из 6 символов!");
                 return;
             }
 
             if (mail.Length == 0)
             {
+                Mail.BorderBrush = new SolidColorBrush(Colors.Red);
                 MessageBox.Show("Укажите почту!");
+                return;
+            }
+            else if (!Regex.IsMatch(mail, @"[@]"))
+            {
+                Mail.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Неккоректная почта!");
                 return;
             }
 
             if (pass.Length == 0)
             {
+                Password.BorderBrush = new SolidColorBrush(Colors.Red);
                 MessageBox.Show("Укажите пароль!");
                 return;
             } else if (pass.Length < 6)
             {
+                Password.BorderBrush = new SolidColorBrush(Colors.Red);
                 MessageBox.Show("Пароль должен содержать не менее 6 символов!");
                 return;
             } else if (pass != pass2)
             {
+                Password.BorderBrush = new SolidColorBrush(Colors.Red);
+                Password2.BorderBrush = new SolidColorBrush(Colors.Red);
                 MessageBox.Show("Пароли не совпадают!");
+                return;
+            } else if (!Regex.IsMatch(pass, @"[!@#$%^&*()_+]"))
+            {
+                Password.BorderBrush = new SolidColorBrush(Colors.Red);
+                MessageBox.Show("Пароль должен содержать хотя-бы 1 спец.символ!");
                 return;
             }
 
@@ -92,3 +111,4 @@ namespace WpfApp2
         }
     }
 }
+

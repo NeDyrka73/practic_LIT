@@ -22,6 +22,19 @@ namespace WpfApp2
         public Account()
         {
             InitializeComponent();
+
+            var login = Login.Text;
+
+            var context = new AppDbContext();
+            var user = context.Users.SingleOrDefault(x => x.Login == login);
+
+            login = Login.Text;
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
     }
 }

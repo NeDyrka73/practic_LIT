@@ -44,13 +44,11 @@ namespace WpfApp2
         {
             var login = Login.Text;
             var pass = Password.Text;
+            var mail = Login.Text;
 
             var context = new AppDbContext();
 
-
-            var user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == pass);
-            
-          
+            var user = context.Users.SingleOrDefault(x => x.Login == login || x.Mail == mail && x.Password == pass);
 
             if (user is null)
             {
@@ -60,8 +58,14 @@ namespace WpfApp2
             
     
             MessageBox.Show("Вы успешно вошли в аккаунт!");
+
+            Account account = new Account();
+
+            account.Show();
+            this.Hide();
+
         }
 
-        
+
     }
 }

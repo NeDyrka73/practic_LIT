@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\practic_LIT\obj\Debug\net7.0-windows\
+C:\Users\student\Desktop\Новая папка\practic_LIT\obj\Debug\net7.0-windows\
 WpfApp2
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\practic_LIT\App.xaml
+C:\Users\student\Desktop\Новая папка\practic_LIT\App.xaml
 3-1702901962
 
 121747305967
-226-1232330831
+226600550065
 Account.xaml;MainWindow.xaml;Registration.xaml;
 
 True
